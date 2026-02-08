@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coverly Front</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4b2bee",
+              "accent-cyan": "#00f2ff",
+              "background-light": "#f6f6f8",
+              "background-dark": "#0a0a0f",
+              "surface-dark": "#161618",
+              "card-dark": "#131022",
+              "border-dark": "#292348"
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "sans": ["Space Grotesk", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .pro-glow {
+        box-shadow: 0 0 20px rgba(75, 43, 238, 0.3);
+      }
+      .glass-effect {
+        backdrop-filter: blur(8px);
+        background: rgba(30, 25, 51, 0.6);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #4b2bee;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #3a1fd8;
+      }
+      .mesh-gradient {
+        background: linear-gradient(135deg, #f6f6f8 0%, #eef1f5 100%);
+      }
+      .dark .mesh-gradient {
+        background: linear-gradient(135deg, #0a0a0f 0%, #131022 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
