@@ -12,7 +12,7 @@ const AdOverlayPricingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-white selection:bg-primary selection:text-white">
-      <Header />
+      
       
       <main className="max-w-[1200px] mx-auto px-6 py-16 lg:py-24 overflow-hidden">
         {/* Hero Section */}
