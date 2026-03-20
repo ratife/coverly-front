@@ -5,7 +5,7 @@ import { useKeycloak } from "../keycloak/KeycloakProvider";
 import { MenuAdpro } from "./MenuAdpro";
 import { MenuPublic } from "./MenuPublic";
 
-export default function HeaderStandard() {
+export default function Header() {
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { authenticated, login, logout, register, token } = useKeycloak();
@@ -32,16 +32,42 @@ export default function HeaderStandard() {
             </div>
             <h1 className="text-2xl font-bold">Coverly</h1>
           </div>
+          
+          {/* Menu Desktop */}
           <div className="hidden md:flex items-center gap-8">
             {authenticated ? (
               <MenuAdpro/>
             ) : (
-              <MenuPublic/>
+              <>
+                <MenuPublic/>
+                <div className="relative group">
+                    <button className="font-medium hover:text-primary transition-colors flex items-center gap-1">
+                    Nouveautés
+                    <span className="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                        <Link to="/contact" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">Contact</Link>
+                        <Link to="/about" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">Apropos</Link>
+                    </div>
+                    </div>
+                </div>
+              </>
             )}
-
-            
           </div>
+          
           <div className="flex items-center gap-3">
+            {/* Bouton Menu Mobile (Hamburger) */}
+            <button
+              onClick={() => setOpen(!open)}
+              className="md:hidden p-2 rounded-lg border border-slate-300 dark:border-border-dark hover:bg-slate-100 dark:hover:bg-white/5 transition-all"
+              aria-label="Ouvrir le menu"
+            >
+              <span className="material-symbols-outlined text-slate-700 dark:text-white">
+                {open ? 'close' : 'menu'}
+              </span>
+            </button>
+            
             {/* Bouton de changement de thème */}
             <button
               onClick={toggleTheme}
@@ -87,6 +113,37 @@ export default function HeaderStandard() {
             )}
           </div>
         </div>
+        
+        {/* Menu Mobile Déroulant */}
+        {open && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-border-dark shadow-lg">
+            <div className="flex flex-col px-6 py-4 gap-4">
+              {authenticated ? (
+                <>
+                  <MenuAdpro/>
+                </>
+              ) : (
+                <>
+                  <MenuPublic/>
+                  <Link to="/contact" className="font-medium hover:text-primary transition-colors">Contact</Link>
+                  <Link to="/abouts" className="font-medium hover:text-primary transition-colors">Apropos</Link>
+                  {/* Boutons de connexion pour mobile */}
+                  <div className="flex flex-col gap-2 pt-4 border-t border-slate-200 dark:border-border-dark">
+                    <button
+                      onClick={() => {
+                        handleLogin();
+                        setOpen(false);
+                      }}
+                      className="w-full px-5 py-2 text-sm font-bold border border-slate-300 dark:border-border-dark rounded-lg hover:bg-slate-100 dark:hover:bg-white/5 transition-all"
+                    >
+                      Connexion
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
