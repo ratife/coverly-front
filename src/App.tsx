@@ -10,13 +10,13 @@ import AdvisionProEditorPage from './pages/publisher/advision-pro-editor/Advisio
 import EspaceCreateurPortfolioPage from './pages/publisher/espace-createur-portfolio/EspaceCreateurPortfolioPage';
 import EspaceCreateurMarketplacePage from './pages/advertiser/espace-createur-marketplace/EspaceCreateurMarketplacePage';
 import './App.css';
-import HeaderStandard from "./layouts/HeaderStandard";
+import Header from "./layouts/Header";
 import { KeycloakProvider } from './keycloak/KeycloakProvider';
 
 function App() {
   return (
     <KeycloakProvider>
-        <HeaderStandard />
+        <Header/>
         <Routes>
           <Route path="/" element={<CoverAdsMonetizePage />} />
           <Route path="/pricing" element={<AdOverlayPricingPage />} />

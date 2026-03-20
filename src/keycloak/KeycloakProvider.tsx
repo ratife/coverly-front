@@ -8,6 +8,7 @@ interface KeycloakContextType {
   token: string | undefined;
   login: () => void;
   logout: () => void;
+  register: () => void;
 }
 
 const KeycloakContext = createContext<KeycloakContextType | null>(null);
@@ -70,6 +71,10 @@ export const KeycloakProvider = ({ children }: KeycloakProviderProps) => {
     keycloak.logout({ redirectUri: window.location.origin });
   };
 
+  const register = () => {
+    keycloak.register();
+  };
+
   const contextValue: KeycloakContextType = {
     keycloak,
     initialized,
@@ -77,6 +82,7 @@ export const KeycloakProvider = ({ children }: KeycloakProviderProps) => {
     token: keycloak.token,
     login,
     logout,
+    register,
   };
 
   // Afficher un loader pendant l'initialisation
