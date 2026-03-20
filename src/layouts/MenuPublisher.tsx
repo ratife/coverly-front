@@ -8,6 +8,7 @@ export const MenuAdpro = () => {
             <Link to="/pub/analytics" className="font-medium hover:text-primary transition-colors">Analytics</Link>
             <Link to="/pub/audience" className="font-medium hover:text-primary transition-colors">Audience</Link>
             <Link to="/pub/facturation" className="font-medium hover:text-primary transition-colors">Facturation</Link>
+            <Link to="/pub/profil" className="font-medium hover:text-primary transition-colors">Profil</Link>
         </>
   );
 }

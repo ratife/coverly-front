@@ -7,7 +7,6 @@ export const MenuPublic = () => {
             <Link to="/pricing" className="font-medium hover:text-primary transition-colors">Tarifs</Link>
             <Link to="/l_adpro" className="font-medium hover:text-primary transition-colors">Annonceur</Link>
             <Link to="/l_pub" className="font-medium hover:text-primary transition-colors">Créateur de contenu</Link>
-            <Link to="/adpro/profil" className="font-medium hover:text-primary transition-colors">Profil</Link>
         </>
   );
 }
