@@ -18,9 +18,9 @@ export default function HeaderStandard() {
           </div>
           <div className="hidden md:flex items-center gap-8">
             <Link to="/" className="font-medium hover:text-primary transition-colors">Acceuil</Link>
-            <Link to="/adoverlay-pricing" className="font-medium hover:text-primary transition-colors">Tarifs</Link>
-            <Link to="/annonceur-campaign" className="font-medium hover:text-primary transition-colors">Annonceur</Link>
-            <Link to="/espace-createur" className="font-medium hover:text-primary transition-colors">Créateur</Link>
+            <Link to="/pricing" className="font-medium hover:text-primary transition-colors">Tarifs</Link>
+            <Link to="/l_adpro" className="font-medium hover:text-primary transition-colors">Annonceur</Link>
+            <Link to="/l_pub" className="font-medium hover:text-primary transition-colors">Créateur de contenu</Link>
             <div className="relative group">
               <button className="font-medium hover:text-primary transition-colors flex items-center gap-1">
                 Nouveautés
@@ -28,12 +28,8 @@ export default function HeaderStandard() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link to="/adcover-pro" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">AdCover Pro</Link>
-                  <Link to="/adoverlay-market" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">Marketplace</Link>
-                  <Link to="/creatorconnect" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">CreatorConnect</Link>
-                  <Link to="/advision-pro-editor" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">AdVision Editor</Link>
-                  <Link to="/espace-createur-portfolio" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">Portfolio Créateur</Link>
-                  <Link to="/espace-createur-marketplace" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">Marketplace Créateur</Link>
+                  <Link to="/contact" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">Contact</Link>
+                  <Link to="/about" className="block px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-white/5">Apropos</Link>
                 </div>
               </div>
             </div>
