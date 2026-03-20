@@ -16,22 +16,24 @@ import { KeycloakProvider } from './keycloak/KeycloakProvider';
 function App() {
   return (
     <KeycloakProvider>
+      
         <Header/>
+
         <Routes>
           <Route path="/" element={<CoverAdsMonetizePage />} />
           <Route path="/pricing" element={<AdOverlayPricingPage />} />
-          
-            <Route path="adpro" element={<AnnonceurCampaignPage />} />
-            <Route path="adpro/espace-createur-portfolio" element={<EspaceCreateurPortfolioPage />} />
-            <Route path="adpro/espace-createur-marketplace" element={<EspaceCreateurMarketplacePage />} />
-            <Route path="adpro/campaigns" element={<AdCoverProPage />} />
 
-            <Route path="pub/advision-pro-editor" element={<AdvisionProEditorPage />} />
-            <Route path="pub/espace-createur" element={<EspaceCreateurPage />} />
-            <Route path="pub/adoverlay-market" element={<AdOverlayMarketPage />} />
-            <Route path="pub/creatorconnect" element={<CreatorConnectPage />} />
-          
+          <Route path="adpro" element={<AnnonceurCampaignPage />} />
+          <Route path="adpro/espace-createur-portfolio" element={<EspaceCreateurPortfolioPage />} />
+          <Route path="adpro/espace-createur-marketplace" element={<EspaceCreateurMarketplacePage />} />
+          <Route path="adpro/adcover-pro" element={<AdCoverProPage />} />
+
+          <Route path="pub/advision-pro-editor" element={<AdvisionProEditorPage />} />
+          <Route path="pub/espace-createur" element={<EspaceCreateurPage />} />
+          <Route path="pub/adoverlay-market" element={<AdOverlayMarketPage />} />
+          <Route path="pub/creatorconnect" element={<CreatorConnectPage />} />
         </Routes>
+
     </KeycloakProvider>
   );
 }
