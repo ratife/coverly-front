@@ -1,7 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import AdOverlayPricingPage from './pages/audience/adoverlay-pricing-page/AdOverlayPricingPage';
 import AnnonceurCampaignPage from './pages/advertiser/annonceur-campaign-manager/AnnonceurCampaignPage';
-import CoverAdsMonetizePage from './pages/audience/home/CoverAdsMonetizePage';
 import EspaceCreateurPage from './pages/publisher/espace-createur-dashboard/EspaceCreateurPage';
 import AdCoverProPage from './pages/advertiser/adcover-pro/AdCoverProPage';
 import AdOverlayMarketPage from './pages/advertiser/adoverlay-market/AdOverlayMarketPage';
@@ -10,18 +8,16 @@ import AdvisionProEditorPage from './pages/publisher/advision-pro-editor/Advisio
 import EspaceCreateurPortfolioPage from './pages/publisher/espace-createur-portfolio/EspaceCreateurPortfolioPage';
 import EspaceCreateurMarketplacePage from './pages/advertiser/espace-createur-marketplace/EspaceCreateurMarketplacePage';
 import './App.css';
-import Header from "./layouts/Header";
 import { KeycloakProvider } from './keycloak/KeycloakProvider';
+import HomePage from './pages/audience/HomePage';
+import PricePage from './pages/audience/PricePage';
 
 function App() {
   return (
     <KeycloakProvider>
-      
-        <Header/>
-
         <Routes>
-          <Route path="/" element={<CoverAdsMonetizePage />} />
-          <Route path="/pricing" element={<AdOverlayPricingPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pricing" element={<PricePage />} />
 
           <Route path="adpro" element={<AnnonceurCampaignPage />} />
           <Route path="adpro/espace-createur-portfolio" element={<EspaceCreateurPortfolioPage />} />
