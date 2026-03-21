@@ -9,7 +9,7 @@ import EspaceCreateurPortfolioPage from './pages/publisher/espace-createur-portf
 import EspaceCreateurMarketplacePage from './pages/advertiser/espace-createur-marketplace/EspaceCreateurMarketplacePage';
 import './App.css';
 import { KeycloakProvider } from './keycloak/KeycloakProvider';
-import HomePage from './pages/audience/HomePage';
+import HomePage from './pages/HomePage';
 import PricePage from './pages/audience/PricePage';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/pricing" element={<PricePage />} />
-
+          
           <Route path="adpro" element={<AnnonceurCampaignPage />} />
           <Route path="adpro/espace-createur-portfolio" element={<EspaceCreateurPortfolioPage />} />
           <Route path="adpro/espace-createur-marketplace" element={<EspaceCreateurMarketplacePage />} />
