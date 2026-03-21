@@ -1,4 +1,5 @@
 import { Search, PlusCircle } from 'lucide-react';
+import ThemeButton from '../../../layouts/ThemeButton';
 
 export default function Header() {
   return (
@@ -21,8 +22,8 @@ export default function Header() {
           <PlusCircle className="w-5 h-5" />
           Créer une Campagne
         </button>
+        <ThemeButton/>
         <div className="flex items-center gap-4 ml-8">
-          
           
           <div className="h-8 w-[1px] bg-slate-200 dark:bg-border-dark"></div>
           

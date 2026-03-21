@@ -3,8 +3,7 @@ import Header from "../layouts/Header";
 
 import CoverAdsMonetizePage from "./audience/home/CoverAdsMonetizePage";
 import AdvisionProEditorPage from "./publisher/advision-pro-editor/AdvisionProEditorPage";
-import CampaignList from "./advertiser/campaign-list/CampaignList";
-import Campaign from "./advertiser/campaign/Campaign";
+import Dashboard from "./advertiser/dashboard/Dashboard";
 
 function HomePage() {
   const { authenticated, keycloak } = useKeycloak();
@@ -33,7 +32,7 @@ function HomePage() {
 
   // 🔥 Cas 2 : utilisateur connecté
   return hasRole("adpro") ? (
-    <CampaignList />
+    <Dashboard />
   ) : (
     <AdvisionProEditorPage />
   );

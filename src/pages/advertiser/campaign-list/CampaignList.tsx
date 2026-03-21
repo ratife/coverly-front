@@ -1,10 +1,10 @@
 import { Filter, Calendar } from 'lucide-react';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import StatCard from './components/StatCard';
+import Sidebar from '../shared/Sidebar';
+import Header from '../shared/Header';
+import StatCard from '../shared/StatCard';
 import CampaignTable from './components/CampaignTable';
 import MediaLibrary from './components/MediaLibrary';
-import { STATS } from './constants';
+import { STATS } from '../shared/constants';
 
 export default function CampaignList() {
   return (
@@ -15,16 +15,10 @@ export default function CampaignList() {
         <Header />
         
         <div className="p-8 space-y-8">
-          {/* Stats Grid */}
-          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {STATS.map((stat, index) => (
-              <StatCard key={stat.label} stat={stat} index={index} />
-            ))}
-          </section>
-
+         
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
             {/* Main Content: Campaigns */}
-            <section className="xl:col-span-2 space-y-4">
+            <section className="xl:col-span-4 space-y-4">
               <div className="flex items-center justify-between">
                 <h4 className="text-lg font-bold">Campagnes Actives</h4>
                 <div className="flex gap-2">
@@ -39,14 +33,7 @@ export default function CampaignList() {
               <CampaignTable />
             </section>
 
-            {/* Sidebar Content: Media Library */}
-            <section className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h4 className="text-lg font-bold">Médiathèque</h4>
-                <button className="text-primary text-xs font-bold hover:underline">Voir Tout</button>
-              </div>
-              <MediaLibrary />
-            </section>
+            
           </div>
         </div>
       </main>

@@ -1,4 +1,4 @@
-import type { Campaign, MediaFile, Stat } from './types';
+import type { Campaign, MediaFile, Stat } from '../campaign-list/types';
 
 export const STATS: Stat[] = [
   {

@@ -1,5 +1,5 @@
 import * as Icons from 'lucide-react';
-import type { Stat } from '../types';
+import type { Stat } from '../campaign-list/types';
 import React from 'react';
 import { motion } from 'motion/react';
 

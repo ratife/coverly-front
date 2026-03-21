@@ -9,8 +9,8 @@ import {
 } from 'lucide-react';
 
 const navItems = [
-  { icon: LayoutDashboard, label: 'Tableau de bord', id: 'dashboard' },
-  { icon: Megaphone, label: 'Campagnes', id: 'campaigns', active: true },
+  { icon: LayoutDashboard, label: 'Tableau de bord', id: 'dashboard', active: true  },
+  { icon: Megaphone, label: 'Campagnes', id: 'campaigns'},
   { icon: Library, label: 'Médiathèque', id: 'media' },
   { icon: BarChart3, label: 'Analyses', id: 'analytics' },
 ];
