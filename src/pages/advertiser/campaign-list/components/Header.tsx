@@ -21,6 +21,22 @@ export default function Header() {
           <PlusCircle className="w-5 h-5" />
           Créer une Campagne
         </button>
+        <div className="flex items-center gap-4 ml-8">
+          
+          
+          <div className="h-8 w-[1px] bg-slate-200 dark:bg-border-dark"></div>
+          
+          <button className="p-2 text-slate-500 hover:text-primary transition-colors">
+            <span className="material-symbols-outlined">notifications</span>
+          </button>
+          
+          <div className="size-9 rounded-full bg-slate-200 dark:bg-surface-dark overflow-hidden border-2 border-primary cursor-pointer hover:opacity-80 transition-opacity">
+            <div 
+              className="w-full h-full bg-center bg-cover" 
+              style={{ backgroundImage: `url('https://picsum.photos/seed/user/100/100')` }}
+            />
+          </div>
+        </div>
       </div>
     </header>
   );
