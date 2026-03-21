@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ThemeButton from '../../../../layouts/ThemeButton';
 
 const Header: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const Header: React.FC = () => {
             type="text"
           />
         </div>
+        <ThemeButton />
         <button className="p-2 rounded-lg bg-slate-100 dark:bg-[#292348] hover:bg-slate-200 dark:hover:bg-[#352d5e] transition-colors relative">
           <span className="material-symbols-outlined text-xl">notifications</span>
           <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>

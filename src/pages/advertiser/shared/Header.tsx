@@ -43,10 +43,10 @@ export default function Header() {
   }, []);
   
   return (
-    <header className="h-20 flex items-center justify-between px-8 bg-background-dark/50 backdrop-blur-md sticky top-0 z-10 border-b border-border-dark">
+    <header className="h-20 flex items-center justify-between px-8 bg-white/80 dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-10 border-b border-slate-200 dark:border-border-dark">
       <div className="flex flex-col">
-        <h2 className="text-2xl font-bold tracking-tight">Gestion des Campagnes</h2>
-        <p className="text-sm text-text-muted">Gérez et optimisez vos campagnes publicitaires</p>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-white">Gestion des Campagnes</h2>
+        <p className="text-sm text-slate-500 dark:text-text-muted">Gérez et optimisez vos campagnes publicitaires</p>
       </div>
 
       <div className="flex items-center gap-4">
@@ -55,7 +55,7 @@ export default function Header() {
           <input
             type="text"
             placeholder="Rechercher une campagne..."
-            className="pl-10 pr-4 py-2 bg-border-dark border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary/50 transition-all outline-none text-white"
+            className="pl-10 pr-4 py-2 bg-slate-100 dark:bg-border-dark border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary/50 transition-all outline-none text-slate-800 dark:text-white"
           />
         </div>
 

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ThemeButton from '../../../../layouts/ThemeButton';
 
 interface HeaderProps {
   onSearch: (query: string) => void;
@@ -22,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
             onChange={(e) => onSearch(e.target.value)}
           />
         </div>
+        <ThemeButton />
         <button className="relative p-2 text-slate-400 hover:text-white transition-colors">
           <span className="material-symbols-outlined">notifications</span>
           <span className="absolute top-1.5 right-1.5 size-2 bg-primary rounded-full"></span>

@@ -4,7 +4,7 @@ import MediaLibrary from './components/MediaLibrary';
 
 export default function Mediatheque() {
   return (
-    <div className="flex min-h-screen bg-background-dark text-slate-100">
+    <div className="flex min-h-screen bg-slate-50 dark:bg-background-dark text-slate-800 dark:text-slate-100">
       <Sidebar />
       
       <main className="flex-1 flex flex-col h-screen overflow-y-auto">

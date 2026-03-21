@@ -19,7 +19,7 @@ const StatCard: React.FC<StatCardProps> = ({ stat, index }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="bg-surface-dark p-6 rounded-xl border border-[#3b3267] shadow-sm"
+      className="bg-white dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-[#3b3267] shadow-sm"
     >
       <div className="flex justify-between items-start mb-4">
         <div className={`p-2 bg-primary/10 ${stat.color} rounded-lg`}>
@@ -31,8 +31,8 @@ const StatCard: React.FC<StatCardProps> = ({ stat, index }) => {
           {stat.change}
         </span>
       </div>
-      <p className="text-text-muted text-xs font-medium uppercase tracking-wider">{stat.label}</p>
-      <h3 className="text-2xl font-bold mt-1">{stat.value}</h3>
+      <p className="text-slate-500 dark:text-text-muted text-xs font-medium uppercase tracking-wider">{stat.label}</p>
+      <h3 className="text-2xl font-bold mt-1 text-slate-800 dark:text-white">{stat.value}</h3>
     </motion.div>
   );
 };

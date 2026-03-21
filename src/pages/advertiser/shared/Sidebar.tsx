@@ -29,7 +29,7 @@ export default function Sidebar() {
   };
   
   return (
-    <aside className="w-64 border-r border-border-dark flex flex-col h-screen bg-[#141122]">
+    <aside className="w-64 border-r border-slate-200 dark:border-border-dark flex flex-col h-screen bg-white dark:bg-[#141122]">
       <div className="p-6 flex items-center gap-3">
         <div className="bg-primary p-2 rounded-lg">
           <Layers className="text-white w-6 h-6" />
@@ -48,7 +48,7 @@ export default function Sidebar() {
             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
               item.active 
                 ? 'bg-primary/10 text-primary border border-primary/20' 
-                : 'text-slate-400 hover:bg-border-dark hover:text-white'
+                : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-border-dark hover:text-slate-900 dark:hover:text-white'
             }`}
             onClick={() => handleClick(item.link || '#')}
           >
@@ -65,7 +65,7 @@ export default function Sidebar() {
           <a
             key={item.id}
             href="#"
-            className="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:bg-border-dark hover:text-white rounded-lg transition-colors group"
+            className="flex items-center gap-3 px-3 py-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-border-dark hover:text-slate-900 dark:hover:text-white rounded-lg transition-colors group"
           >
             <item.icon className="w-5 h-5" />
             <span className="text-sm font-medium">{item.label}</span>
@@ -73,8 +73,8 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <div className="p-4 border-t border-border-dark">
-        <div className="flex items-center gap-3 p-2 bg-[#1e1933] rounded-xl">
+      <div className="p-4 border-t border-slate-200 dark:border-border-dark">
+        <div className="flex items-center gap-3 p-2 bg-slate-100 dark:bg-[#1e1933] rounded-xl">
           <img
             src="https://picsum.photos/seed/alex/100/100"
             alt="Avatar utilisateur"
@@ -82,8 +82,8 @@ export default function Sidebar() {
             referrerPolicy="no-referrer"
           />
           <div className="overflow-hidden">
-            <p className="text-sm font-bold truncate">Alex Rivest</p>
-            <p className="text-[10px] text-text-muted truncate">Offre Entreprise</p>
+            <p className="text-sm font-bold truncate text-slate-800 dark:text-white">Alex Rivest</p>
+            <p className="text-[10px] text-slate-500 dark:text-text-muted truncate">Offre Entreprise</p>
           </div>
         </div>
       </div>
