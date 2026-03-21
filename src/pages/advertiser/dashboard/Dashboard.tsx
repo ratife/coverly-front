@@ -1,4 +1,3 @@
-import { Filter, Calendar } from 'lucide-react';
 import Sidebar from '../shared/Sidebar';
 import Header from '../shared/Header';
 import StatCard from '../shared/StatCard';
@@ -19,12 +18,9 @@ export default function Dashboard() {
               <StatCard key={stat.label} stat={stat} index={index} />
             ))}
           </section>
-
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
-            
-
-            
           </div>
+          
         </div>
       </main>
     </div>

@@ -6,10 +6,10 @@ import CampaignTable from './components/CampaignTable';
 export default function CampaignList() {
   return (
     <div className="flex min-h-screen bg-slate-50 dark:bg-background-dark text-slate-800 dark:text-slate-100">
-      <Sidebar />
-      
-      <main className="flex-1 flex flex-col h-screen overflow-y-auto">
-        <Header />
+        <Sidebar />
+        
+        <main className="flex-1 flex flex-col h-screen overflow-y-auto">
+          <Header />
         
         <div className="p-8 space-y-8">
          
@@ -30,6 +30,7 @@ export default function CampaignList() {
               <CampaignTable />
             </section>
           </div>
+
         </div>
       </main>
     </div>
