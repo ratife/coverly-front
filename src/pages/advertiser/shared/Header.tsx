@@ -7,7 +7,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("adpro/campaign/new");
+    navigate("/adpro/campaign/new");
   };
   
   return (
@@ -45,10 +45,12 @@ export default function Header() {
           <div className="size-9 rounded-full bg-slate-200 dark:bg-surface-dark overflow-hidden border-2 border-primary cursor-pointer hover:opacity-80 transition-opacity">
             <div 
               className="w-full h-full bg-center bg-cover" 
-              style={{ backgroundImage: `url('https://picsum.photos/seed/user/100/100')` }}
+              style={{ backgroundImage: `url('https://picsum.photos/seed/user/100/200')` }}
             />
           </div>
+
         </div>
+
       </div>
     </header>
   );

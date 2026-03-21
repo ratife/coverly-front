@@ -1,25 +1,24 @@
-import { Navbar } from './components/Navbar';
-import { Sidebar } from './components/Sidebar';
+import Sidebar from '../shared/Sidebar';
+import Header from '../shared/Header';
 import { CampaignForm } from './components/CampaignForm';
-import { SummaryPanel } from './components/SummaryPanel';
-import { motion } from 'motion/react';
 
 export default function Campaign() {
   return (
-    <div className="min-h-screen bg-surface text-on-surface selection:bg-primary/30">
-      <Navbar />
+    <div className="flex min-h-screen bg-background-dark text-slate-100">
       <Sidebar />
       
-      <main className="ml-64 mt-16 p-8 min-h-[calc(100vh-64px)]">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8"
-        >
-          <CampaignForm />
-          <SummaryPanel />
-        </motion.div>
+      <main className="flex-1 flex flex-col h-screen overflow-y-auto">
+        <Header />
+        
+        <div className="p-8 space-y-8">
+         
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+            {/* Main Content: Campaigns */}
+            <section className="xl:col-span-4 space-y-4">
+              <CampaignForm />
+            </section>
+          </div>
+        </div>
       </main>
     </div>
   );

@@ -3,7 +3,7 @@ import { MEDIA_FILES } from '../../shared/constants';
 
 export default function MediaLibrary() {
   return (
-    <div className="bg-[#141122] p-4 rounded-xl border border-[#3b3267] flex flex-col gap-4 shadow-sm h-full max-h-[600px] overflow-hidden">
+    <div className="bg-[#141122] p-4 rounded-xl border border-[#3b3267] flex flex-col gap-4 shadow-sm h-full max-h-[800px] overflow-hidden">
       <div className="border-2 border-dashed border-[#3b3267] rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-pointer hover:border-primary/50 transition-colors">
         <div className="p-3 bg-primary/10 rounded-full text-primary mb-3 group-hover:scale-110 transition-transform">
           <CloudUpload className="w-6 h-6" />

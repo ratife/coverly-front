@@ -1,10 +1,7 @@
 import { Filter, Calendar } from 'lucide-react';
 import Sidebar from '../shared/Sidebar';
 import Header from '../shared/Header';
-import StatCard from '../shared/StatCard';
 import CampaignTable from './components/CampaignTable';
-import MediaLibrary from './components/MediaLibrary';
-import { STATS } from '../shared/constants';
 
 export default function CampaignList() {
   return (
@@ -32,8 +29,6 @@ export default function CampaignList() {
               </div>
               <CampaignTable />
             </section>
-
-            
           </div>
         </div>
       </main>
