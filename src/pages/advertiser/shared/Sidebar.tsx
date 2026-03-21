@@ -7,12 +7,13 @@ import {
   HelpCircle,
   Layers
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const navItems = [
-  { icon: LayoutDashboard, label: 'Tableau de bord', id: 'dashboard', active: true  },
-  { icon: Megaphone, label: 'Campagnes', id: 'campaigns'},
-  { icon: Library, label: 'Médiathèque', id: 'media' },
-  { icon: BarChart3, label: 'Analyses', id: 'analytics' },
+  { icon: LayoutDashboard, label: 'Tableau de bord', id: 'dashboard', active: true, link: '/' },
+  { icon: Megaphone, label: 'Campagnes', id: 'campaigns', link: '/adpro/campaigns' },
+  { icon: Library, label: 'Médiathèque', id: 'media', link: '/adpro/media' },
+  { icon: BarChart3, label: 'Analyses', id: 'analytics', link: '/adpro/analytics' },
 ];
 
 const accountItems = [
@@ -21,6 +22,12 @@ const accountItems = [
 ];
 
 export default function Sidebar() {
+  const navigate = useNavigate();
+
+  const handleClick = (link:string) => {
+    navigate(link);
+  };
+  
   return (
     <aside className="w-64 border-r border-border-dark flex flex-col h-screen bg-[#141122]">
       <div className="p-6 flex items-center gap-3">
@@ -43,6 +50,7 @@ export default function Sidebar() {
                 ? 'bg-primary/10 text-primary border border-primary/20' 
                 : 'text-slate-400 hover:bg-border-dark hover:text-white'
             }`}
+            onClick={() => handleClick(item.link || '#')}
           >
             <item.icon className="w-5 h-5" />
             <span className="text-sm font-medium">{item.label}</span>
